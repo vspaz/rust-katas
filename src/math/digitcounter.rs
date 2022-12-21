@@ -21,4 +21,9 @@ mod tests {
     fn test_get_digit_count_with_zero() {
         assert_eq!(get_digit_count(0), 0);
     }
+
+    #[test]
+    fn test_get_digit_count_with_one() {
+        assert_eq!(get_digit_count(1), 1);
+    }
 }
