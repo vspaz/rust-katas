@@ -16,4 +16,9 @@ mod tests {
     fn test_get_digit_count_ok() {
         assert_eq!(get_digit_count(13033), 5);
     }
+
+    #[test]
+    fn test_get_digit_count_with_zero() {
+        assert_eq!(get_digit_count(0), 0);
+    }
 }
