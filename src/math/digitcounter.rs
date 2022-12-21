@@ -7,3 +7,13 @@ pub fn get_digit_count(num: u32) -> u32 {
     }
     return count;
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::math::digitcounter::get_digit_count;
+
+    #[test]
+    fn test_get_digit_count_ok() {
+        assert_eq!(get_digit_count(13033), 5);
+    }
+}
