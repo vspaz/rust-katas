@@ -22,7 +22,6 @@ pub fn count_letters_2(text: &str) -> HashMap<char, i32> {
     return letter_to_count;
 }
 
-
 #[cfg(test)]
 mod tests {
     use crate::lettercounter;
@@ -33,5 +32,4 @@ mod tests {
         assert_eq!(2, letter_to_count[&'o']);
         assert_eq!(2, letter_to_count[&'b']);
     }
-
 }
