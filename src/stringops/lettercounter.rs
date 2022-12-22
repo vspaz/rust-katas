@@ -10,3 +10,11 @@ pub fn count_letters(text: String) -> HashMap<&str, i32> {
     }
     return letter_to_count
 }
+
+pub fn count_letters_2(text: String) -> HashMap<&str, i32> {
+    let mut letter_to_count = HashMap::with_capacity(text.len());
+    for letter in text.chars() {
+        letter_to_count.entry(letter).and_modify(|count| *count += 1).or_insert(1);
+    }
+    return letter_to_count;
+}
