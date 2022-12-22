@@ -7,3 +7,14 @@ pub fn reverse_digit(num: i64) -> i64 {
     }
     return reversed_num;
 }
+
+
+#[cfg(test)]
+mod tests {
+    use crate::math::reversedigit::reverse_digit;
+
+    #[test]
+    fn test_reverse_digit_count_ok() {
+        assert_eq!(54321, reverse_digit(12345));
+    }
+}
