@@ -32,4 +32,11 @@ mod tests {
         assert_eq!(2, letter_to_count[&'o']);
         assert_eq!(2, letter_to_count[&'b']);
     }
+
+    #[test]
+    fn test_count_letters_2_ok() {
+        let letter_to_count = lettercounter::count_letters_2("foobarbaz");
+        assert_eq!(2, letter_to_count[&'o']);
+        assert_eq!(2, letter_to_count[&'b']);
+    }
 }
