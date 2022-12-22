@@ -43,6 +43,9 @@ mod tests {
     #[test]
     fn test_count_letters_equal() {
         let text = "foobarbaz";
-        assert_eq!(lettercounter::count_letters(text), lettercounter::count_letters_2(text));
+        assert_eq!(
+            lettercounter::count_letters(text),
+            lettercounter::count_letters_2(text)
+        );
     }
 }
