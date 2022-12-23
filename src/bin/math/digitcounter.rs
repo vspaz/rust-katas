@@ -9,7 +9,7 @@ pub fn get_digit_count(mut num: u32) -> u32 {
 
 #[cfg(test)]
 mod tests {
-    use crate::math::digitcounter::get_digit_count;
+    use crate::digitcounter::get_digit_count;
 
     #[test]
     fn test_get_digit_count_ok() {

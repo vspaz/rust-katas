@@ -10,7 +10,7 @@ pub fn reverse_digit(num: i64) -> i64 {
 
 #[cfg(test)]
 mod tests {
-    use crate::math::reversedigit::reverse_digit;
+    use crate::reversedigit::reverse_digit;
 
     #[test]
     fn test_reverse_digit_count_ok() {
