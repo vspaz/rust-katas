@@ -1,6 +1,6 @@
 all: build
 build:
-	cargo build
+	cargo build --workspace
 
 .PHONY: test
 test:
