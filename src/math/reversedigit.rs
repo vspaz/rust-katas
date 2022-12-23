@@ -5,7 +5,7 @@ pub fn reverse_digit(num: i64) -> i64 {
         reversed_num = reversed_num * 10 + original_num % 10;
         original_num /= 10;
     }
-    return reversed_num;
+    reversed_num
 }
 
 #[cfg(test)]

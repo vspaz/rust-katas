@@ -4,7 +4,7 @@ pub fn get_digit_count(mut num: u32) -> u32 {
         num /= 10;
         count += 1;
     }
-    return count;
+    count
 }
 
 #[cfg(test)]
