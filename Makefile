@@ -4,7 +4,7 @@ build:
 
 .PHONY: test
 test:
-	cargo test
+	cargo test -- --test-threads=8
 
 .PHONY: style-fix
 style-fix:
