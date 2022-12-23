@@ -1,8 +1,5 @@
-mod digitcounter;
-mod reversedigit;
-
-use digitcounter::get_digit_count;
-use reversedigit::reverse_digit;
+use crate::digitcounter::get_digit_count;
+use crate::reversedigit::reverse_digit;
 
 fn main() {
     assert_eq!(5, get_digit_count(10303));
