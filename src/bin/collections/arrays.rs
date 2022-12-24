@@ -21,9 +21,16 @@ mod tests {
     use crate::arrays::get_max;
 
     #[test]
-    fn test_get_max_with_size_one() {
+    fn test_get_max_with_size_one_ok() {
         let mut nums: Vec<i64> = Vec::new();
         nums.insert(0, 10);
         assert_eq!(get_max(nums), 10);
+    }
+
+    #[test]
+    fn test_get_max_ok() {
+        let mut nums: Vec<i64> = vec![1, 2, 3, -10, 40, 100, -80, 50, 140];
+        nums.insert(0, 10);
+        assert_eq!(get_max(nums), 140);
     }
 }
