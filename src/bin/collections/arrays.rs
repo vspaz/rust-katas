@@ -2,6 +2,7 @@ use std::process::exit;
 
 fn get_max(nums: Vec<i64>) -> i64 {
     if nums.len() == 0 {
+        eprintln!("size can't be 0");
         exit(-1);
     }
     if nums.len() == 1 {
