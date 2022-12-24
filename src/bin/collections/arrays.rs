@@ -1,7 +1,7 @@
 use std::process::exit;
 
 pub fn get_max(nums: Vec<i64>) -> i64 {
-    if nums.len() == 0 {
+    if nums.is_empty() {
         eprintln!("size can't be 0");
         exit(-1);
     }
@@ -9,9 +9,9 @@ pub fn get_max(nums: Vec<i64>) -> i64 {
         return nums[0];
     }
     let mut max_num = nums[0];
-    for i in 1..nums.len() {
-        if nums[i] > max_num {
-            max_num = nums[i];
+    for num in nums.iter().skip(1) {
+        if *num > max_num {
+            max_num = *num;
         }
     }
     max_num
