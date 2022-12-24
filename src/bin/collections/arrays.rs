@@ -1,7 +1,6 @@
 use core::panicking::panic;
-use std::process::exit;
 
-fn get_max_num_in_array(nums: &mut [i64]) -> i64 {
+fn get_max(nums: &mut [i64]) -> i64 {
     if nums.len() == 0 {
         panic("array can't be 0");
     }
@@ -15,4 +14,15 @@ fn get_max_num_in_array(nums: &mut [i64]) -> i64 {
         }
     }
     num
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::arrays::get_max;
+
+    #[test]
+    fn test_get_max_with_size_one() {
+        assert_eq!(get_max([10]), 10);
+    }
+
 }
