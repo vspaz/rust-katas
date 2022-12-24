@@ -1,19 +1,19 @@
-use core::panicking::panic;
+use std::process::exit;
 
-fn get_max(nums: &mut [i64]) -> i64 {
+fn get_max(nums: Vec<i64>) -> i64 {
     if nums.len() == 0 {
-        panic("array can't be 0");
+        exit(-1);
     }
-    if nums.len() = 1 {
-        return nums.get(0);
+    if nums.len() == 1 {
+        return nums[0];
     }
-    let max_num = nums[0];
-    for num in 1..nums.le() {
-        if num > max_num {
-            max_num = num;
+    let mut max_num = nums[0];
+    for i in 1..nums.len() {
+        if nums[i] > max_num {
+            max_num = nums[i];
         }
     }
-    num
+    max_num
 }
 
 #[cfg(test)]
@@ -22,7 +22,8 @@ mod tests {
 
     #[test]
     fn test_get_max_with_size_one() {
-        assert_eq!(get_max([10]), 10);
+        let mut nums: Vec<i64> = Vec::new();
+        nums.insert(0, 10);
+        assert_eq!(get_max(nums), 10);
     }
-
 }

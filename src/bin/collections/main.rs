@@ -1,0 +1,3 @@
+mod arrays;
+
+fn main() {}
