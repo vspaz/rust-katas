@@ -28,6 +28,7 @@ pub fn get_total(nums: Vec<i64>) -> i64 {
 #[cfg(test)]
 mod tests {
     use crate::arrays::get_max;
+    use crate::arrays::get_total;
 
     #[test]
     fn test_get_max_with_size_one_ok() {
@@ -41,5 +42,10 @@ mod tests {
         let mut nums: Vec<i64> = vec![1, 2, 3, -10, 40, 100, -80, 50, 140];
         nums.insert(0, 10);
         assert_eq!(get_max(nums), 140);
+    }
+
+    #[test]
+    fn test_get_total_ok() {
+        assert_eq!(10, get_total(vec![2, 2, 2, 2, 2]));
     }
 }
