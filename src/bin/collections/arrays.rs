@@ -56,4 +56,9 @@ mod tests {
     fn test_get_total_ok() {
         assert_eq!(10, get_total(vec![2, 2, 2, 2, 2]));
     }
+
+    #[test]
+    fn test_get_total_one_element_ok() {
+        assert_eq!(2, get_total(vec![2]));
+    }
 }
