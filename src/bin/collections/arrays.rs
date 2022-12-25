@@ -17,6 +17,14 @@ pub fn get_max(nums: Vec<i64>) -> i64 {
     max_num
 }
 
+pub fn get_total(nums: Vec<i64>) -> i64 {
+    let mut total = 0;
+    for num in nums.iter() {
+        total += num;
+    }
+    total
+}
+
 #[cfg(test)]
 mod tests {
     use crate::arrays::get_max;
