@@ -30,7 +30,7 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
     for num in nums.iter() {
         total += num
     }
-    total / nums.len() as f64
+    total as f64 / nums.len() as f64
 }
 
 #[cfg(test)]
