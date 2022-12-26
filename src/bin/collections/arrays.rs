@@ -35,8 +35,8 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
 
 #[cfg(test)]
 mod tests {
-    use crate::arrays::get_max;
     use crate::arrays::get_total;
+    use crate::arrays::{get_average, get_max};
 
     #[test]
     fn test_get_max_with_size_one_ok() {
@@ -60,5 +60,10 @@ mod tests {
     #[test]
     fn test_get_total_one_element_ok() {
         assert_eq!(2, get_total(vec![2]));
+    }
+
+    #[test]
+    fn test_get_average_ok() {
+        assert_eq!(1.0, get_average(vec![1, 2, 0, 0, 2]))
     }
 }
