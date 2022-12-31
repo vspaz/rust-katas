@@ -16,3 +16,16 @@ pub fn bin_search(nums: Vec<i64>, num: i64) -> Option<usize> {
     }
     return None;
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::binary_search::bin_search;
+
+    #[test]
+    fn test_bin_search_ok() {
+        let nums: Vec<i64> = vec![-5, 0, 143, 800, 14800];
+        let num_to_look_for = 143;
+        let num_index = bin_search(nums, num_to_look_for);
+        assert_eq!(2, num_index.unwrap());
+    }
+}
