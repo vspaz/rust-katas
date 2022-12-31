@@ -7,6 +7,6 @@ fn main() {
 
     match num_index {
         Some(idx) => println!("num {} found at index {}", num_to_look_for, idx),
-        None => println!("num {} not found", num_to_look_for ),
+        None => println!("num {} not found", num_to_look_for),
     }
 }

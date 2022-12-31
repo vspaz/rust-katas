@@ -23,9 +23,13 @@ mod tests {
 
     #[test]
     fn test_bin_search_ok() {
-        let nums: Vec<i64> = vec![-5, 0, 143, 800, 14800];
-        let num_to_look_for = 143;
-        let num_index = bin_search(nums, num_to_look_for);
+        let num_index = bin_search(vec![-5, 0, 143, 800, 14800], 143);
         assert_eq!(2, num_index.unwrap());
+    }
+
+    #[test]
+    fn test_bin_search_with_vector_size_one_ok() {
+        let num_index = bin_search(vec![-5], -5);
+        assert_eq!(0, num_index.unwrap());
     }
 }
