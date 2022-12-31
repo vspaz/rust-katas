@@ -32,4 +32,9 @@ mod tests {
         let num_index = bin_search(vec![-5], -5);
         assert_eq!(0, num_index.unwrap());
     }
+    #[test]
+    fn test_bin_search_not_found_ok() {
+        let num_index = bin_search(vec![1, 2, 3, 4, 5], 10);
+        assert_eq!(true, num_index.is_none());
+    }
 }
