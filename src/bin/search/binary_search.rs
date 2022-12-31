@@ -14,7 +14,7 @@ pub fn bin_search(nums: Vec<i64>, num: i64) -> Option<usize> {
             lower_bound = mid + 1;
         }
     }
-    return None;
+    None
 }
 
 #[cfg(test)]
