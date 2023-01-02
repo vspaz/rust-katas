@@ -43,9 +43,6 @@ pub fn reverse_array_in_place<T: Ord>(nums: &mut [T]) {
     }
 }
 
-pub fn fh_reverse_array_idiomatic<T: Ord>(nums: &mut [T]) {
-    nums.iter().rev().collect()
-}
 
 #[cfg(test)]
 mod tests {
@@ -85,5 +82,14 @@ mod tests {
         let mut nums = [5, 4, 3, 2, 1];
         reverse_array_in_place(&mut nums);
         assert_eq!([1, 2, 3, 4, 5], nums);
+    }
+
+    #[test]
+    fn test_reverse_idiomatic_ok() {
+        let mut nums = [5, 4, 3, 2, 1];
+        let mut nums_2 = nums.to_owned();
+        reverse_array_in_place(&mut nums);
+        nums_2.reverse();
+        assert_eq!([1, 2, 3, 4, 5], nums_2);
     }
 }
