@@ -33,6 +33,20 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
     total as f64 / nums.len() as f64
 }
 
+pub fn reverse_array(nums: Vec<i64>) -> Vec<i64> {
+    let mut start = 0;
+    let mut end = nums.len() -  1;
+    let mut temp;
+    while start < end {
+        temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+        start += 1;
+        end -= 1;
+    }
+    nums
+}
+
 #[cfg(test)]
 mod tests {
     use crate::arrays::get_total;
