@@ -33,9 +33,9 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
     total as f64 / nums.len() as f64
 }
 
-pub fn reverse_array(nums: Vec<i64>) -> Vec<i64> {
+pub fn reverse_array(nums:  &mut [i32; 5]) -> [i32; 5]{
     let mut start = 0;
-    let mut end = nums.len() -  1;
+    let mut end = nums.len() - 1;
     let mut temp;
     while start < end {
         temp = nums[start];
@@ -44,13 +44,13 @@ pub fn reverse_array(nums: Vec<i64>) -> Vec<i64> {
         start += 1;
         end -= 1;
     }
-    nums
+    *nums
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::arrays::get_total;
     use crate::arrays::{get_average, get_max};
+    use crate::arrays::{get_total, reverse_array};
 
     #[test]
     fn test_get_max_with_size_one_ok() {
@@ -79,5 +79,10 @@ mod tests {
     #[test]
     fn test_get_average_ok() {
         assert_eq!(1.0, get_average(vec![1, 2, 0, 0, 2]))
+    }
+
+    #[test]
+    fn test_reverse_ok() {
+        assert_eq!([1, 2, 3, 4, 5], reverse_array(&mut [5, 4, 3, 2, 1]))
     }
 }
