@@ -33,7 +33,7 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
     total as f64 / nums.len() as f64
 }
 
-pub fn reverse_array(nums:  &mut [i32; 5]) -> [i32; 5]{
+pub fn reverse_array(nums: &mut [i32; 5]) -> [i32; 5] {
     let mut start = 0;
     let mut end = nums.len() - 1;
     let mut temp;
