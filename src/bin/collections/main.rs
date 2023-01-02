@@ -6,4 +6,7 @@ fn main() {
     assert_eq!(arrays::get_max(nums), 140);
     assert_eq!(10, arrays::get_total(vec![2, 2, 2, 2, 2]));
     assert_eq!(3.0, arrays::get_average(vec![2, 3, 4]));
+    let mut nums = [5, 4, 3, 2, 1];
+    arrays::reverse_array_in_place(&mut nums);
+    assert_eq!([1, 2, 3, 4, 5], nums);
 }
