@@ -33,17 +33,18 @@ pub fn get_average(nums: Vec<i64>) -> f64 {
     total as f64 / nums.len() as f64
 }
 
-pub fn reverse_array_in_place(nums: &mut [i32; 5]) {
+pub fn reverse_array_in_place<T: Ord>(nums: &mut [T]) {
     let mut start = 0;
     let mut end = nums.len() - 1;
-    let mut temp;
     while start < end {
-        temp = nums[start];
-        nums[start] = nums[end];
-        nums[end] = temp;
+        nums.swap(start, end);
         start += 1;
         end -= 1;
     }
+}
+
+pub fn fh_reverse_array_idiomatic<T: Ord>(nums: &mut [T]) {
+    nums.iter().rev().collect()
 }
 
 #[cfg(test)]
