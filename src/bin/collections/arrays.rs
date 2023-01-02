@@ -43,7 +43,6 @@ pub fn reverse_array_in_place<T: Ord>(nums: &mut [T]) {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use crate::arrays::{get_average, get_max, get_total, reverse_array_in_place};

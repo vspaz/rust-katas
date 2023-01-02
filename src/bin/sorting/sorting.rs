@@ -2,7 +2,7 @@ pub fn bubble_sort<T: Ord>(nums: &mut [T]) {
     for i in 0..nums.len() {
         for j in 0..nums.len() - (1 + i) {
             if nums[j] > nums[j + 1] {
-            nums.swap(j, j+ 1);
+                nums.swap(j, j + 1);
             }
         }
     }
