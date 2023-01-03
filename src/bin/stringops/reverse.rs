@@ -1,0 +1,11 @@
+pub fn reverse_acii_string(text: &str) -> String {
+    let mut chars = text.as_bytes().to_owned();
+    let mut start = 0;
+    let mut end = chars.len() - 1;
+    while start < end {
+        chars.swap(start, end);
+        start += 1;
+        end -= 1;
+    }
+    std::str::from_utf8(&chars).unwrap().to_string()
+}
