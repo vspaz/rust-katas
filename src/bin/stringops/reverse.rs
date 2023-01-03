@@ -18,4 +18,9 @@ mod tests {
     fn reverse_ascii_string_ok() {
         assert_eq!("abcde", reverse_acii_string("edcba"));
     }
+
+    #[test]
+    fn reverse_ascii_string_ok_2() {
+        assert_eq!("abcde".chars().rev().collect::<String>(), reverse_acii_string("abcde"));
+    }
 }
