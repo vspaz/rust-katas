@@ -9,3 +9,13 @@ pub fn reverse_acii_string(text: &str) -> String {
     }
     std::str::from_utf8(&chars).unwrap().to_string()
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::reverse::reverse_acii_string;
+
+    #[test]
+    fn reverse_ascii_string_ok() {
+        assert_eq!("abcde", reverse_acii_string("edcba"));
+    }
+}
