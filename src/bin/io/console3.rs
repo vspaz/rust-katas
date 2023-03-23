@@ -12,7 +12,10 @@ pub fn compare_nums() {
         io::stdin()
             .read_line(&mut num_as_text)
             .expect("failed to read input");
-        let num: u32 = num_as_text.trim().parse().expect("please type in a number");
+        let num: u32 = match num_as_text.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         match num.cmp(&random_num) {
             Ordering::Less => println!("{} is less", num),
