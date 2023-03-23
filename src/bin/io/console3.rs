@@ -1,6 +1,6 @@
+use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-use rand::Rng;
 
 pub fn compare_nums() {
     let mut guess = String::with_capacity(2);
