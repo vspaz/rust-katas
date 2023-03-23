@@ -3,17 +3,24 @@ use std::cmp::Ordering;
 use std::io;
 
 pub fn compare_nums() {
-    let mut guess = String::with_capacity(2);
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("failed to read input");
 
-    let guess: u32 = guess.trim().parse().expect("please type in a number");
     let random_num = rand::thread_rng().gen_range(0..=10);
 
-    match guess.cmp(&random_num) {
-        Ordering::Less => println!("{} < {}", guess, random_num),
-        Ordering::Greater => println!("{} > {}", guess, random_num),
-        Ordering::Equal => println!("{} == {}", guess, random_num),
+    loop {
+        let mut num_as_text = String::with_capacity(2);
+        println!("Please type in a number");
+        io::stdin()
+            .read_line(&mut num_as_text)
+            .expect("failed to read input");
+        let num: u32 = num_as_text.trim().parse().expect("please type in a number");
+
+        match num.cmp(&random_num) {
+            Ordering::Less => println!("{} is less", num),
+            Ordering::Greater => println!("{} is greater", num),
+            Ordering::Equal => {
+                println!("{} is equal", num);
+                break;
+            }
+        }
     }
 }
