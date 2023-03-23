@@ -2,7 +2,7 @@ use rand::Rng;
 use std::io;
 
 pub fn get_random_num() {
-    let random_num = rand::thread_rng().gen_range(0..10);
+    let random_num = rand::thread_rng().gen_range(0..=10);
 
     println!("type in any number between 0 and 10");
     let mut num_as_string = String::with_capacity(2);
