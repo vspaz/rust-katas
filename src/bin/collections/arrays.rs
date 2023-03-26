@@ -86,7 +86,7 @@ mod tests {
     #[test]
     fn test_reverse_idiomatic_ok() {
         let mut nums = [5, 4, 3, 2, 1];
-        let mut nums_2 = nums.to_owned();
+        let mut nums_2 = nums.clone();
         reverse_array_in_place(&mut nums);
         nums_2.reverse();
         assert_eq!([1, 2, 3, 4, 5], nums_2);
