@@ -3,7 +3,6 @@ use std::cmp::Ordering;
 use std::io;
 
 pub fn compare_nums() {
-
     let random_num = rand::thread_rng().gen_range(0..=10);
 
     loop {
