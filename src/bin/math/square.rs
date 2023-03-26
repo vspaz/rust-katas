@@ -5,7 +5,10 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    fn get_area(&self) -> u32 {
+    pub fn new(width: u32, height: u32) -> Rectangle {
+        Rectangle {width, height}
+    }
+    pub fn get_area(&self) -> u32 {
         self.width * self.height
     }
 }
