@@ -1,5 +1,5 @@
 #[derive(Debug)]
-struct Rectangle {
+pub(crate) struct Rectangle {
     width: u32,
     height: u32,
 }
@@ -10,5 +10,15 @@ impl Rectangle {
     }
     pub fn get_area(&self) -> u32 {
         self.width * self.height
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::square;
+
+    #[test]
+    fn test_get_area() {
+        assert_eq!(20, square::Rectangle::new(5, 4).get_area());
     }
 }
