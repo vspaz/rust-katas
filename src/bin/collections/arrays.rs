@@ -53,7 +53,7 @@ pub fn increment_by(value: i32, mut nums: Vec<i32>) -> Vec<i32> {
 
 #[cfg(test)]
 mod tests {
-    use crate::arrays::{get_average, get_max, get_total, reverse_array_in_place};
+    use crate::arrays::{get_average, get_max, get_total, increment_by, reverse_array_in_place};
 
     #[test]
     fn test_get_max_with_size_one_ok() {
@@ -98,5 +98,11 @@ mod tests {
         reverse_array_in_place(&mut nums);
         nums_2.reverse();
         assert_eq!([1, 2, 3, 4, 5], nums_2);
+    }
+
+    #[test]
+    fn test_increment_by_ok() {
+        let nums = vec![0, 10, 20 , 30, 40, -10];
+        assert_eq!(vec![10, 20, 30, 40, 50, 0], increment_by(10, nums));
     }
 }
