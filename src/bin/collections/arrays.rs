@@ -43,6 +43,14 @@ pub fn reverse_array_in_place<T: Ord>(nums: &mut [T]) {
     }
 }
 
+pub fn increment_by(value: i32, mut nums: Vec<i32>) -> Vec<i32> {
+    for num in &mut nums {
+        *num += value;
+    }
+    return nums;
+}
+
+
 #[cfg(test)]
 mod tests {
     use crate::arrays::{get_average, get_max, get_total, reverse_array_in_place};
