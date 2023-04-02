@@ -47,7 +47,7 @@ pub fn increment_by(value: i32, mut nums: Vec<i32>) -> Vec<i32> {
     for num in &mut nums {
         *num += value;
     }
-    return nums;
+    nums
 }
 
 #[cfg(test)]
