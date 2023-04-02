@@ -1,4 +1,5 @@
 mod arrays;
+mod maps;
 
 fn main() {
     let mut nums: Vec<i64> = vec![1, 2, 3, -10, 40, 100, -80, 50, 140];
@@ -11,4 +12,8 @@ fn main() {
     assert_eq!([1, 2, 3, 4, 5], nums);
     let nums = vec![0, 10, 20, 30, 40, -10];
     assert_eq!(vec![10, 20, 30, 40, 50, 0], arrays::increment_by(10, nums));
+
+    let words = &vec!["foo", "foo", "bar", "baz", "bar", "barbaz"];
+    let word_to_count = maps::get_occurrence(words);
+    assert_eq!(2, word_to_count["bar"]);
 }
