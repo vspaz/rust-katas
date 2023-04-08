@@ -1,6 +1,6 @@
-use std::env;
+mod cmd;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    let args = cmd::get_args();
     dbg!(args);
 }
