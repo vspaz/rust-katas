@@ -1,5 +1,9 @@
-pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+pub fn search(query: &str, contents: &str) -> Vec<String> {
+    let mut found_matches: Vec<String> = Vec::new();
     for line in contents.lines() {
-        line
+        if line.contains(query) {
+            found_matches.push(line.to_string())
+        }
     }
+    found_matches
 }
