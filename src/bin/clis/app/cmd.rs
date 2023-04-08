@@ -2,8 +2,8 @@ use std::{env, process};
 
 #[derive(Debug)]
 pub struct CmdArgs {
-    query: String,
-    file_path: String,
+    pub query: String,
+    pub file_path: String,
 }
 
 pub fn get_args() -> CmdArgs {
