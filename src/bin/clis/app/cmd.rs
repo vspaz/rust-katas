@@ -9,7 +9,7 @@ pub struct CmdArgs {
 pub fn get_args() -> CmdArgs {
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
-        println!("not enough arguments");
+        eprintln!("not enough arguments");
         process::exit(-1)
     }
     return CmdArgs {
